@@ -11,17 +11,16 @@ public class Q17 {
 
 		
 		Scanner scan = new Scanner(System.in);
-		System.out.print("Lutfen bir sayi giriniz=");
+		System.out.print("Lutfen bir sayi giriniz = ");
 		int sayi = scan.nextInt();
 		
 		// System.out.println("say�n�n mutlak de�eri=" + Math.abs(sayi));
 		
 		 if (sayi < 0) {
-           System.out.println("mutlak degeri=" + sayi*(-1));
+          sayi*=(-1);
         }
-        else {
-            System.out.println("mutlak degeri=" +sayi);
-        }
+            System.out.println("girdiginiz sayinin mutlak degeri = " +sayi);
+
  
 		scan.close();
 		

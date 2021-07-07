@@ -11,11 +11,21 @@ public class Soru_03 {
 
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Sayi giriniz");
+        System.out.print("Sayi giriniz : ");
         int num = scan.nextInt();
+        System.out.println("*****  TERNARY çözümü  *****");
 
-        String result = (num > 99 && num < 1000) ? ("3 basamakli") : (num % 2 == 0 ? "3 basamaklı  çift sayı" : "3 basamaklı olmayan tek sayı");
+        String result = (num > 99 && num < 1000) ? ("3 basamakli") : (num % 2 == 0 ? "3 basamaklı olmayan çift sayı" : "3 basamaklı olmayan tek sayı");
         System.out.println(result);
+
+        System.out.println("*****  if  çözümü  *****");
+        if (num <1000 && num>99) {
+            System.out.println("3 basamaklı");
+
+        }else if (num % 2 == 0 ) {
+            System.out.println("3 basamaklı olmayan çift sayı");
+
+        }else System.out.println("3 basamaklı olmayan tek sayı");
 //(şart) ? true:falese
     }
 }

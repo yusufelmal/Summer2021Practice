@@ -13,13 +13,24 @@ public class Soru_01 {
 
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Sayi giriniz");
+        System.out.print("Sayi giriniz : ");
         int num = scan.nextInt();
-        if (num>=0) {
-            String result = (num > 99 && num < 1000) ? ("3 basamakli") : (num % 2 == 0 ? "3 basamaklı olmayan  çift sayı" : "3 basamaklı olmayan tek sayı");
+        System.out.println("*****  TERNARY çözümü  *****");
+
+            String result = (num >=0 ) ?  (num <10 ? "rakam" : "pozitif sayı"):("negatif sayı");
             System.out.println(result);
-        }
-        else System.out.println("hatalı sayi girdiniz");
+
+
+        System.out.println("*****  if  çözümü  *****");
+
+      if (num >=0) {
+            if (num <10) {
+                System.out.println("rakam");
+
+            }else System.out.println("pozitif sayı");
+
+        }else System.out.println("negatif sayı");
+
 
     }
 }

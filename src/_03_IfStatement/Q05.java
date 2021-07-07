@@ -12,12 +12,13 @@ public class Q05 {
 
 		Scanner sc = new Scanner(System.in);
 
-		System.out.print("Luften yasinizi giriniz");
+		System.out.print("Luften yasinizi giriniz : ");
 		int yas = sc.nextInt();
+		System.out.print("lütfen kilonuzu giriniz : ");
 		int kilo = sc.nextInt();
 
 
-		if (yas > 0 && yas < 18) {
+		if ( yas>0 && yas < 18) {
 			System.out.println("Yaşı 18 den küçük olanlar  kan bağışı yapamaz");
 		} else if (yas >= 18) {
 			if (kilo > 0 && kilo < 50) {
@@ -30,8 +31,6 @@ public class Q05 {
 		} else {
 			System.out.println("Yalnış bir değer girdiniz");
 		}
-
-
 
 	}
 
