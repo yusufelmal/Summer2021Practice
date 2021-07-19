@@ -1,4 +1,4 @@
-package _07_ForLoop.Cozumler;
+package _07_ForLoop;
 
 import java.util.Scanner;
 
