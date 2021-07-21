@@ -7,7 +7,7 @@ public class Q01 {
        DEĞİLSE While kullanılır, Eğer döngüye bir kez mutlaka girilecekse DO_WHILE kullanılır.
 
        Problem Tanımı
-        100'den 0'a kadar 13'e tam bölünebilen sayıları ekrana yazdırınız (büyükten küçüğe).
+        100'den 0'a kadar 13'e tam bölünebilen sayıları ve toplamlarını ekrana yazdırınız (büyükten küçüğe).
 
          Ekran Çıktısı
         91
@@ -18,13 +18,15 @@ public class Q01 {
         26
         13       */
     public static void main(String[] args) {
-        int top=0;
-        for (int i = 1; i <100; i++) {
-            if(i%13==0)
-                System.out.println(i);
-                top+=i;
-
-
-        }System.out.println(top);
+    	int top=0;
+    	
+    	for (int i = 100; i >0; i--) {
+    		if (i%13==0) {
+    			System.out.println(i);
+				top+=i;
+			}
+			
+		}System.out.println(top);
+        
     }
 }

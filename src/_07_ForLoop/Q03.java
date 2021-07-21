@@ -15,17 +15,17 @@ public class Q03 {
          */
         Scanner scan = new Scanner(System.in);
         System.out.print("bir metin giriniz : ");
-        String cumle = scan.nextLine();
+        String str = scan.nextLine();
 
         int aMiktar = 0;
-        for (int i = 0; i < cumle.length(); i++) {
-            if (cumle.toLowerCase().charAt(i) == 'a')
+        for (int i = 0; i < str.length(); i++) {
+            if (str.toLowerCase().charAt(i) == 'a')
                 aMiktar++;
-            else if (cumle.toLowerCase().charAt(i) == 'c')
+            else if (str.toLowerCase().charAt(i) == 'c')
                 break;
         }
 
-        System.out.println("aMiktar = " + aMiktar);
+        System.out.println("girdiginiz metindeki c karakterine kadar olan a karakter sayisi : "+aMiktar);
     }
 
 }

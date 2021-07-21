@@ -26,7 +26,7 @@ public class Q07 {
 
     public static String reverseString(String str) {
 
-        String str2 = str.trim().replaceAll("\\s+", " ");
+        String str2 = str.trim();
 
         String strTers = "";
 

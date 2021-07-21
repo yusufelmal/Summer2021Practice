@@ -49,7 +49,7 @@ public class Q10 {
         boolean b = false;
         int carpim = 1;
 
-        for (int i = 1; i < num / 3; i++) {
+        for (int i = 1; i < num / 3; i++) { //num/3 olamdan direk num da yazılabilir
             carpim *= 3;
 
             if (carpim == num) {
