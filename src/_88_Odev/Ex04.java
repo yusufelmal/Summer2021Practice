@@ -10,14 +10,14 @@ public class Ex04 {
 //   *  *
 //  *   *
 // *    *
-//*******
+//*******  şekli konsola  yazdırınız...
 
         for (int satir = 1; satir <= 7; satir++) {
-            // bosluk icin
-            for (int bosluk = 1; bosluk <= 7 - satir; bosluk++)//sola dayalı olması için bu for yoruma alınmalı
+            // uçgen dısı bosluk icin
+            for (int bosluk = 1; bosluk <= 7 - satir; bosluk++)//sola dayalı olması için bu for yoruma alınmalı ama soru saga dayalı olg için bu blok yazıldı
                 System.out.print(" ");
 
-            // '*' icin
+            //ucgen kenarlarindaki '*' icin
             for (int sutun = 1; sutun <= satir; sutun++) {
                 // kenarlarda "*" yazmak icin
                 if (satir == 7 || sutun == 1 || sutun == satir)
@@ -25,7 +25,6 @@ public class Ex04 {
                 else
                     System.out.print(" ");
             }
-
             System.out.println();
         }
     }
