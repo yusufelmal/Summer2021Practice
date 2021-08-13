@@ -16,14 +16,14 @@ public class Q01 {
 			int sayilar[] = new int[size];
 			
 			for(int i = 0; i<sayilar.length; i++){
-				System.out.println("Lutfen Array'in " + (i+1) + ".ci elemanini giriniz"); // i+0'i kullanici 0.eleman ne demesin diye yazdik
+				System.out.print("Lutfen Array'in " + (i+1) + ".ci elemanini giriniz"); // i+0'i kullanici 0.eleman ne demesin diye yazdik
 				sayilar[i] = scan.nextInt(); // bu satirda da kulllanici dongu bitene eleman girer
 			}
 
 			Arrays.sort(sayilar);
 			System.out.println(Arrays.toString(sayilar));
 			
-			System.out.println(sayilar[size-1] - sayilar[0]);
+			System.out.println("girdiginiz sayılerın max ile min farki : "+(sayilar[size-1] - sayilar[0]));
 	}
 
 }

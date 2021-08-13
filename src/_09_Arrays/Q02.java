@@ -7,8 +7,8 @@ public class Q02 {
 
 
         //multidimensional arrayin iç array lerindeki tüm elemanların toplamını birer birer bulan
-        // ve herbir sonucu yeni bir arrayin elemanı yapan ve yeni array i ekrana yazdıran programı yaz
-        //örneğin {{10,20,30},{4},{6,7,20}}==> output ={60,4,33}
+        // ve herbir sonucu yeni bir arrayin elemanı yapan ve yeni array i ekrana yazdıran programı yaziniz.
+        //input {{10,20,30},{4},{6,7,20}}==> output ={60,4,33}
 
 
         int arr[][]={{10,20,30},{4},{6,7,20}};

@@ -30,15 +30,19 @@ public class _05_PermutasyonKombinasyon {
         System.out.print("Permütasyon ve Kombinasyon hesabı için r değerini giriniz: ");
         long r = scan.nextInt();
 
-        System.out.println("Kombinasyon değeri = " + kombinasyon(n, r));
-        System.out.println("Permütasyon değeri = " + permutasyom(n, r));
 
+        if (kombinasyon(n, r) == 0 && permutasyom(n, r) == 0) {
+            System.out.println("Seçim sayısı(n) eleman sayısına(r) eşit veya eleman sayısından(r) büyük olmalidir. (n>=r)");
+        } else {
+            System.out.println("kombinayon : " + kombinasyon(n, r));
+            System.out.println("Permütasyon : " + permutasyom(n, r));
+        }
     }
 
     public static long faktoriyel(long number) {
         long fakSonuc = 1;
         for (int i = 1; i <= number; i++) {
-            fakSonuc = fakSonuc * i;
+            fakSonuc *= i;
         }
         return fakSonuc;
     }
@@ -46,12 +50,20 @@ public class _05_PermutasyonKombinasyon {
     public static long kombinasyon(long n, long r) {
         if (n > 0 && r > 0 && n >= r) {
             return (faktoriyel(n) / (faktoriyel(n - r) * faktoriyel(r)));
-        } else return 0;
+        } else if (n == 0 && r == 0) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 
     public static long permutasyom(long n, long r) {
         if (n > 0 && r > 0 && n >= r) {
             return (faktoriyel(n) / faktoriyel(n - r));
-        } else return 0;
+        } else if (n == 0 && r == 0) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 }

@@ -10,7 +10,6 @@ public class Q03 {
         //output :-1,-2,3,-4,5,6
 
         int[] arr = {1, 2, -3, 4, -5, -6};
-     //   System.out.println(Arrays.toString(arr));
 
         for (int w : arr) {
             w *= -1;
