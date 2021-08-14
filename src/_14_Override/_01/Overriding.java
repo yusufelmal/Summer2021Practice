@@ -1,71 +1,77 @@
 package _14_Override._01;
 
 public class Overriding {
-    /*  Overriding.....
-    1) Overridding : Parent Class'daki bir METHOD'u Child Class a gore ozellestirerek kullanmanın adıdır.
+	
+	/*Overriding::::
+	 * Parent class'daki bir METHOD'u child class'a gore ozellestirerek kulanmanin adidir.
+	 * OVERRIDING KURALLARI
+	 * 1) Overriding creat edilirken  "method signature" (name+ parameters)
+     * 	kesinlikle ve ASLAAA degistirilemez...!!!	
+     * 
+	 * 2)Overriding creat edilirken "access modifier" belirli kurallara gore degistirilebilir
+	 * 
+	 * 3)Overriding creat edilirken "return type" belirli kurallara gore degistirilebilir
+	 * 
+	 * 4)Overriding creat edilirken "method body" %99   degistirilir.
+	 *    ama degistirilmezse  CTE vermez (amelelik olur overriding amaci body creat etmek .)
+	 *  
+	 * 5)Overriding creat edilirken "parent - child" relationship sarttir.
+	 *    Ahan da trick :  inheritance olamadan overriding olamz  OLAMAZZZZ...!
+	 * 
+	 * 6)"Overridden method": Parent class'daki methoddur(zavallı ezilen)
+	 *   "Overriding method": Child class'daki methoddur( ezen)
+	 * 
+	 * 7) "Overriding method" (child )'ın AccMo ya "Overridden method" (parent) ile ayni ya da 
+	 * daha genis olmali .Evlat babanin erisimini daraltamaz ama genisletebilir. SubAccMod >= SuperAccMod
+	 * 
+	 * 8)"Overriding method" (child )'ın return type void ise "Overridden method" (parent) return type void olmali 
+	 * kendinden olmayani kanul etmez
+	 * 
+	 * 9)"Overriding method" (child )'ın return type Wrapper clas'dan ise "Overridden method" (parent) return type Wrapper clas'dan
+	 *  olmali kendinden olmayani kabul etmez
+	 *  
+	 *  10) "Overriding method" (child )'ın return type ile "Overridden method" (parent) return  arasinda is-A (child-->parent relationship)
+	 *  iliskisi olmali
+	 *  
+	 *  11)Static method'lar overriding edilemezlerrrr.
+	 *  12)Private  method'lar overriding edilemezlerrrr. -->neden : cunku private
+	 *  13)Final  method'lar overriding edilemezlerrrr. -->neden : final: son hali artik degistirelemezzz de ondan.
+	 *  
+	 *  14)"Polymorphism" BUZZZ gibi inteview....-->"overloading" ve "overriding" den olusan yapiya denir.
+	 *  
+	 *  		"overloading"---> public void yemek(){...}
+	 *  						  public void yemek(String tatli){...}
+	 *  						  public void yemek(String tatli , int ucret){...}
+	 *  
+	 *  
+	 *  
+	 *  		"overidding"--->  public void icmek(){syso(gazoz)}
+	 *  						  public void icmek(){syso(dark ve sek bir kahve)}
+	 *  						  public void icmek(){syso(ucret)}
+	 *  
+	 *  
+	 *  		"overloading" ile  "overriding" arasindaki farklar :
+	 *  	1) "overloading" de  method signature(name+parametre)  değistirilir  (paarametre degisir)
+	 *         "overriding" de  method signature(name+parametre)  asla degistirilemez
+	 *         
+	 *      2)"overloading" de inheritance gerekmez 
+	 *         "overriding" de inheritance olmadam overriding yapilamaz
+	 *         
+	 *      3)"overloading" de body genelliklle degistirlmeden kullanilir 
+	 *         "overriding" de body hemen  hemen her zaman  degistirilir
+	 *         
+	 *      4)Static method'lar overriding edilemezlerrrr. ama overloading edilebilirler
+	 *        Private  method'lar overriding edilemezlerrrr. ama overloading edilebilirler
+	 *        
+	 *      5)overloading Compile Time Polymorphism'dir -->static
+	 *      overriding    Run Time Polymorphism'dir -->dinamik
+	 *  
+	 *  
+	 *  
+	 * 
+	 * 
+	 * 
+	 * 
+	 */
 
-    2) OVERRIDING KURALLARI...
-        a)Overriding creat edilirken "method signature (name+parametre)"
-	      kesinlikle asla degistirilmez...!!!
-	    b)Overriding creat edilirken "acces modifier" lar belli kurallara
-	      gore degistirlebilir.
-	    c)Overriding creat edilirken "return type" lar belli kurallara gore
-	      degistirilebilir.
-	    d)Overriding creat edilirken "method body" %99 degistirilir. "Overriding"
-	      in amaci genel bir methodu parentten childe özel hale getirmektir.
-	      method body yi degistirmeden kullanilirsa Java CTE vermez.
-	    e)Overriding  creat edilirken "parent-child" relationship sarttir.
-	      Ahan da TRICKY : inheritance olmadan overriding olmaz OLAMAZZZZ..
-	    f)"Overridden Method" :Parent Claas'daki Override edilen  methoda denir.
-	      ""Overriding Method" :  Child class daki method Override edilmiş methoda denir.
-
-	      ****buraya kadar eclips olmadan yaz
-
-	 3)Overriding methodun basina "@Override" annotation koyulursa method
-	     overriding kontrolune girer ve hata durumunda  CTE verir.
-
-         ******acmoo çalış...
-
-    4)"Overriding Method" (child) un access modifier , ya "Overridden Method"(parent) ile ayni olur
-	       ya da daha genis olur.Evlat babayi sinirlemeyez..!!!
-
-	 5)Return type’lar primitive ise “Overriding Method” un return type’i
-	 	  “Overridden Method” ile ayni olmalidir.
-
-	 6)Overridden Method”un return type’i void ise “Overriding Method” un da
-	  	  return type’i void olmalidir. kendinden olmayanı kabul etmiyor.
-
-	 7)Return Type Wrapper Class ise “Overriding Method” un return type’i
-	  	  “Overridden Method” ile ayni olmalidir.
-
-	8)Return Type’lar arasinda parent-child relationship varsa
-	 	  “Overriding Method” un return type’i ya “Overridden Method” ile ayni olmali
-	 	  veya “Overridden Method” un child class’i olmali.
-
-	9)static methodlar override edilemezler. gökteki ayi yere indirip özelleştirme olmaz
-
-	 	10)final methodlar override edilemezler.
-	 	11)private methodlar override edilemezler.
-	 	12)"Polymorphism" nedir?"--->BUZZZ gibi...interview sorusu
-	        ==> : Polymorphism "Overloading" ve "Overriding" den olusur.
-	            Overloading==> public void add(){}
-	                           public void add(int i){}
-	                           public void add(int i,String s){}
-	            Overriding==> public void multiply(){syso("3*4)}
-	                          public void multiply(){syso("1*2*3)}
-	                          public void multiply(){syso("5*3*4)}
-	       "Overloading" ve "Overriding"   arasindaki farklar nelerdir.
-	       1)"Overloading" de method signature(name+parametre) degistirilir.(parametre degisir)
-	          "Overriding" de   method signature'a dokunulmaz.
-	       2) "Overloading" de method body genellikle degistirilmez.
-	          "Overriding" de  method body hemen hemen her zaman degistirilir.
-	       3) "Overloading" de inheritance gerekmez.
-	          "Overriding" de inheritance sarttir.Inheritance yoksa overriding yoktur.
-	       4)"Overloading" Compile Time Polymorphism'dir. "Overriding" Run Time  Polymorphism'dir.
-	       5)"private" methodlar overload edilebilirler ama "override" edilemezler.
-	         "static" methodlar overload edilebilirler ama "override" edilemezler.
-
-
-
-     */
 }
