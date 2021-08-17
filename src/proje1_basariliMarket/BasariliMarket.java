@@ -16,7 +16,7 @@ public class BasariliMarket {
 
 	public static void main(String[] args) {
 
-		/* Yeşil Market alış-veriş programı.
+		/* Basarili Market alış-veriş programı.
 		 *
 		 * 1. Adım: Ürünler ve fiyatları içeren listeleri oluşturunuz.
 		 * 			No 	   Ürün 		  Fiyat
