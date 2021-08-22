@@ -16,7 +16,7 @@ public class Q03 {
 		
 		 */
 
-
+*burayı denemek için ben yazdım*
 
 
         Scanner scan = new Scanner(System.in);
