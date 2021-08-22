@@ -23,7 +23,7 @@ public class Q03 {
 
         System.out.println("Boyunuzu cm giriniz : ");
         double boy =scan.nextDouble()/100;
-
+	System.out.println("bunu ben ekledim v6 ");
 
         System.out.println("Kilonuzu kg  giriniz : ");
         double kilo =scan.nextDouble();
